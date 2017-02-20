@@ -226,6 +226,7 @@ export default class extends Component {
     }
 
     this.internals = newInternals
+    console.log({initState});
     return initState
   }
 
