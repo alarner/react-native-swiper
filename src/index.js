@@ -356,6 +356,10 @@ export default class extends Component {
 
     this.internals.offset = offset
 
+    if(this.state.index !== newState.index && this.props.onChange) {
+      this.props.onChange(newState.index, this.fullState(), this);
+    }
+
     // only update offset in state if loopJump is true
     if (loopJump) {
       // when swiping to the beginning of a looping set for the third time,
